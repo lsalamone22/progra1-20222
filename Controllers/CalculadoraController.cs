@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using webapp.Models;
 
 namespace webapp.Controllers
 {
@@ -21,6 +22,18 @@ namespace webapp.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Calcular(Calculadora objCalculadora)
+        {
+            double resultado = 0.0;
+            
+            if(objCalculadora.Operando =="+"){
+                resultado = objCalculadora.Operador1 + objCalculadora.Operador2;
+
+            }
+            return View("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
