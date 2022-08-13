@@ -1,3 +1,5 @@
+@model webapp.Models.Calculadora
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,5 +10,12 @@
 </head>
 <body>
  Mi app calculadora
+<form asp-controller="Calculadora" asp-action="Calcular">
+    <input asp-for="Operador1" class="form-control" />
+    <input asp-for="Operador2" class="form-control" />
+    <input asp-for="Operando" class="form-control" />
+    <button type="submit" class="btn btn-primary">Calcular</button> 
+</form>
+ <h1>@ViewData["Message"]</h1>
 </body>
 </html>
