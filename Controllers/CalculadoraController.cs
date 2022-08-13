@@ -33,6 +33,8 @@ namespace webapp.Controllers
                 resultado = objCalculadora.Operador1 + objCalculadora.Operador2;
 
             }
+            ViewData["Message"] = "El resultado es: "+ resultado;
+
             return View("Index");
         }
 
