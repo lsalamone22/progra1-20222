@@ -27,12 +27,21 @@ namespace webapp.Controllers
         [HttpPost]
         public IActionResult Calcular(Calculadora objCalculadora)
         {
-            double resultado = 0.0;
+            double resultado = 0.00;
             
             if(objCalculadora.Operando =="+"){
                 resultado = objCalculadora.Operador1 + objCalculadora.Operador2;
 
+            }else if(objCalculadora.Operando =="-"){
+                 resultado = objCalculadora.Operador1 - objCalculadora.Operador2;
+            
+            }else if(objCalculadora.Operando =="*"){
+                 resultado = objCalculadora.Operador1 * objCalculadora.Operador2;
+            }else if(objCalculadora.Operando =="/"){
+                 resultado = objCalculadora.Operador1 / objCalculadora.Operador2;
             }
+
+
             ViewData["Message"] = "El resultado es: "+ resultado;
 
             return View("Index");
