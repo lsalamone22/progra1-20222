@@ -32,13 +32,6 @@ namespace webapp.Controllers
             if(objCalculadora.Operando =="+"){
                 resultado = objCalculadora.Operador1 + objCalculadora.Operador2;
 
-            }else if(objCalculadora.Operando =="-"){
-                 resultado = objCalculadora.Operador1 - objCalculadora.Operador2;
-            
-            }else if(objCalculadora.Operando =="*"){
-                 resultado = objCalculadora.Operador1 * objCalculadora.Operador2;
-            }else if(objCalculadora.Operando =="/"){
-                 resultado = objCalculadora.Operador1 / objCalculadora.Operador2;
             }
 
 
